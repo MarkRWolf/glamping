@@ -24,7 +24,7 @@ function ActivityForm() {
     if (file) formData.append("file", file);
 
     try {
-      const res = await fetch("https://glamping-v2.onrender.com/api/activity", {
+      const res = await fetch("https://glamping.onrender.com/api/activity", {
         method: "POST",
         body: formData,
         credentials: "include",
@@ -49,7 +49,7 @@ function ActivityForm() {
             src={
               activity?.file
                 ? URL.createObjectURL(activity.file)
-                : "https://glamping-v2.onrender.com/activities/default.jpg"
+                : "https://glamping.onrender.com/activities/default.jpg"
             }
             alt={"Activity picture"}
           />

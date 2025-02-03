@@ -26,7 +26,7 @@ function ContactPage() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const res = await fetch("https://glamping-v2.onrender.com/api/contact", {
+    const res = await fetch("https://glamping.onrender.com/api/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

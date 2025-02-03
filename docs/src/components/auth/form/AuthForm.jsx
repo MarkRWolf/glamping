@@ -21,7 +21,7 @@ function AuthForm() {
     const { email, password } = userInput;
 
     try {
-      const res = await fetch("https://glamping-v2.onrender.com/api/auth/signIn", {
+      const res = await fetch("https://glamping.onrender.com/api/auth/signIn", {
         headers: {
           "Content-Type": "application/json",
         },
@@ -52,7 +52,7 @@ function AuthForm() {
     if (file) formData.append("file", file);
 
     try {
-      const res = await fetch("https://glamping-v2.onrender.com/api/user", {
+      const res = await fetch("https://glamping.onrender.com/api/user", {
         method: "POST",
         body: formData,
       });

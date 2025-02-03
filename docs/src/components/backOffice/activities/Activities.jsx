@@ -13,7 +13,7 @@ function Activities() {
             {useQuery({
               queryKey: ["activities"],
               queryFn: () =>
-                fetch("https://glamping-v2.onrender.com/api/activities", {
+                fetch("https://glamping.onrender.com/api/activities", {
                   method: "GET",
                   credentials: "include",
                 })

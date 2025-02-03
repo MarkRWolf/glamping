@@ -12,7 +12,7 @@ function Contacts() {
             {useQuery({
               queryKey: ["contacts"],
               queryFn: () =>
-                fetch("https://glamping-v2.onrender.com/api/contacts", {
+                fetch("https://glamping.onrender.com/api/contacts", {
                   method: "GET",
                   credentials: "include",
                 })

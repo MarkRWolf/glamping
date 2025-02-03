@@ -80,7 +80,7 @@ function Stay({ stay: stayData }) {
     formData.append("includes", editableData.includes);
     editableData.file && formData.append("file", editableData.file);
 
-    const res = await fetch(`https://glamping-v2.onrender.com/api/stay`, {
+    const res = await fetch(`https://glamping.onrender.com/api/stay`, {
       method: "PUT",
       credentials: "include",
       body: formData,
@@ -95,7 +95,7 @@ function Stay({ stay: stayData }) {
   };
 
   const deleteStay = async () => {
-    const res = await fetch(`https://glamping-v2.onrender.com/api/stay/${stay._id}`, {
+    const res = await fetch(`https://glamping.onrender.com/api/stay/${stay._id}`, {
       method: "DELETE",
       credentials: "include",
     });

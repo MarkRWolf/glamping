@@ -54,7 +54,7 @@ const useInfo = (location) => {
       }
 
       try {
-        const res = await fetch(`https://glamping-v2.onrender.com/api/${infoKey}`);
+        const res = await fetch(`https://glamping.onrender.com/api/${infoKey}`);
         const result = await res.json();
         const data = result.data;
 

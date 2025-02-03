@@ -5,7 +5,7 @@ function Rerender() {
   const { data } = useQuery({
     queryKey: ["hello"],
     queryFn: () =>
-      fetch("https://glamping-v2.onrender.com/api/hello", {
+      fetch("https://glamping.onrender.com/api/hello", {
         method: "GET",
         credentials: "include",
       })

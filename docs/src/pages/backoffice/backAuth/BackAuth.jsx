@@ -15,7 +15,7 @@ function BackAuth() {
     const { email, password } = userInput;
 
     try {
-      const res = await fetch("https://glamping-v2.onrender.com/api/auth/adminSignIn", {
+      const res = await fetch("https://glamping.onrender.com/api/auth/adminSignIn", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -31,7 +31,7 @@ function StayForm() {
     if (file) formData.append("file", file);
 
     try {
-      const res = await fetch("https://glamping-v2.onrender.com/api/stay", {
+      const res = await fetch("https://glamping.onrender.com/api/stay", {
         method: "POST",
         body: formData,
         credentials: "include",
@@ -54,7 +54,7 @@ function StayForm() {
             src={
               stay?.file
                 ? URL.createObjectURL(stay.file)
-                : "https://glamping-v2.onrender.com/activities/default.jpg"
+                : "https://glamping.onrender.com/activities/default.jpg"
             }
             alt={"Activity picture"}
           />

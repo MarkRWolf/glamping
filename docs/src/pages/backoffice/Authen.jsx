@@ -8,7 +8,7 @@ function Authen({ children }) {
       {useQuery({
         queryKey: ["authStatus"],
         queryFn: () =>
-          fetch("https://glamping-v2.onrender.com/api/auth/token", {
+          fetch("https://glamping.onrender.com/api/auth/token", {
             method: "POST",
             credentials: "include",
           })

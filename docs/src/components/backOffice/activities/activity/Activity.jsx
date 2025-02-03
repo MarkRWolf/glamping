@@ -58,7 +58,7 @@ function Activity({ activity: activityData }) {
     formData.append("time", editableData.time);
     editableData.file && formData.append("file", editableData.file);
 
-    const res = await fetch(`https://glamping-v2.onrender.com/api/activity`, {
+    const res = await fetch(`https://glamping.onrender.com/api/activity`, {
       method: "PUT",
       credentials: "include",
       body: formData,
@@ -73,7 +73,7 @@ function Activity({ activity: activityData }) {
   };
 
   const deleteActivity = async () => {
-    const res = await fetch(`https://glamping-v2.onrender.com/api/activity/${activity._id}`, {
+    const res = await fetch(`https://glamping.onrender.com/api/activity/${activity._id}`, {
       method: "DELETE",
       credentials: "include",
     });

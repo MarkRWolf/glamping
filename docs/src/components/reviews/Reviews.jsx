@@ -10,7 +10,7 @@ function Reviews() {
   const { data } = useQuery({
     queryKey: ["reviews"],
     queryFn: () =>
-      fetch("https://glamping-v2.onrender.com/api/reviews", {
+      fetch("https://glamping.onrender.com/api/reviews", {
         method: "GET",
         credentials: "include",
       })

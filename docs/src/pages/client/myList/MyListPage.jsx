@@ -11,7 +11,7 @@ function MyListPage() {
   useEffect(() => {
     // verify that user-liked items still exist in db
     const fetchActivities = async () => {
-      const res = await fetch("https://glamping-v2.onrender.com/api/activities", {
+      const res = await fetch("https://glamping.onrender.com/api/activities", {
         method: "GET",
         credentials: "include",
       });

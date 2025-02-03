@@ -13,7 +13,7 @@ function Stays() {
             {useQuery({
               queryKey: ["stays"],
               queryFn: () =>
-                fetch("https://glamping-v2.onrender.com/api/stays", {
+                fetch("https://glamping.onrender.com/api/stays", {
                   method: "GET",
                   credentials: "include",
                 })
