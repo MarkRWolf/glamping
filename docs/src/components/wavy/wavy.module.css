@@ -1,0 +1,9 @@
+.wavy {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  border-radius: 2.5rem 0 2.5rem 0;
+  padding: 1rem;
+}

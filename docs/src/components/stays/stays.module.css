@@ -1,0 +1,7 @@
+.stays {
+  padding: 0 0 16rem 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 2rem;
+}

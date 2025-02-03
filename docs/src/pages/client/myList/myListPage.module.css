@@ -1,0 +1,23 @@
+.myActivities {
+  .amount {
+    margin-top: -4rem;
+    font-size: 4rem;
+    font-weight: 600;
+  }
+}
+
+.myList {
+  transition: height 0.3s ease;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 2rem;
+
+  @media screen and (min-width: 768px) {
+    & {
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+}

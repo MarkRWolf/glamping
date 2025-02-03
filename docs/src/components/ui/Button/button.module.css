@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Zen+Loop:ital@0;1&display=swap");
+
+.uiButton {
+  cursor: pointer;
+  font-family: "Zen Loop", cursive;
+  border-radius: 2.5rem 0 2.5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,64 @@
+.reviewsContainer {
+  padding: 3rem 1rem 5rem 1rem;
+
+  h2 {
+    font-size: 4rem;
+    font-weight: 300;
+    padding: 0;
+    text-align: center;
+  }
+  .reviews {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 4rem;
+    margin-top: 4rem;
+    transition: height 0.3s ease-in-out;
+
+    .moreBtn {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      cursor: pointer;
+      .showMore {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        .arrow {
+          margin-top: 4px;
+          font-size: 2.4rem;
+        }
+      }
+    }
+
+    .review {
+      max-width: 380px;
+      display: flex;
+      .reviewInfo {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+
+        gap: 1rem;
+        padding: 0.5rem 0.5rem;
+
+        h3 {
+          text-align: center;
+          font-size: 2rem;
+        }
+
+        p {
+          font-size: 0.9rem;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    & {
+      gap: 6rem;
+    }
+  }
+}

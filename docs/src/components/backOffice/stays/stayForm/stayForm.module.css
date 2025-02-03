@@ -1,0 +1,92 @@
+.formContainer {
+  padding: 2rem;
+  form {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1.5rem;
+    padding: 2rem;
+    border: 1px solid black;
+
+    .heading {
+      margin: 0 auto;
+      color: rgb(83, 83, 83);
+    }
+
+    .imgContainer {
+      position: relative;
+      margin: 0 auto;
+      width: 50%;
+      height: 200px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    label {
+      width: 100%;
+      padding: 5px;
+      display: flex;
+      flex-flow: column nowrap;
+      font-size: 1.2rem;
+      input,
+      textarea {
+        border: 1px solid black;
+        padding: 0.5rem;
+        font-size: 2rem;
+      }
+
+      input {
+        outline: none;
+        font-family: "Poppins", sans-serif;
+        font-size: 1.2rem;
+        background: transparent;
+      }
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      input[type="number"] {
+        appearance: textfield;
+        -moz-appearance: textfield;
+      }
+
+      textarea {
+        resize: none;
+        overflow: hidden;
+        width: 100%;
+        font-family: "Poppins", sans-serif;
+        font-size: 1.2rem;
+        background: transparent;
+        outline: none;
+      }
+    }
+    .overlay {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      pointer-events: none;
+      color: white;
+    }
+    .submitBtn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 2rem;
+      color: black;
+      background: transparent;
+      padding: 1.5rem 0;
+      border: 1px solid black;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+  }
+}

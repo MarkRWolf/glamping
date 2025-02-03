@@ -1,0 +1,9 @@
+.container {
+  .stays {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0 0 2rem 0;
+  }
+}

@@ -1,0 +1,42 @@
+.info {
+  background: #33626c;
+  padding: 5rem 0;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 3rem;
+  color: whitesmoke;
+
+  h2 {
+    padding: 0 1rem;
+    font-size: 3.5rem;
+    font-weight: 400;
+    text-align: center;
+  }
+  p {
+    padding: 0 1rem;
+    font-size: 0.9rem;
+    text-align: center;
+    font-weight: 300;
+  }
+  .gitte {
+    width: 50%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  @media screen and (min-width: 768px) {
+    & {
+      h2,
+      p {
+        width: 75%;
+        padding: 0;
+        line-height: 1.5;
+      }
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+}

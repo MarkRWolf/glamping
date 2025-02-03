@@ -1,0 +1,34 @@
+.stay {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  max-width: 600px;
+  margin-bottom: 10rem;
+
+  .top {
+    padding: 0 0.5rem;
+    height: auto;
+    position: relative;
+    z-index: 1;
+    transform: translateY(50%);
+
+    h3 {
+      font-size: 1.8rem;
+      text-align: center;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: 300px;
+    filter: brightness(0.8);
+    object-fit: cover;
+  }
+
+  .bottom {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    transform: translateY(-52%);
+  }
+}

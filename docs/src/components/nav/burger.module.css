@@ -1,0 +1,46 @@
+.hamburger {
+  pointer-events: all;
+  transition: all 0.3s ease;
+  position: fixed;
+  top: 14px;
+  right: 24px;
+  cursor: pointer;
+
+  input {
+    display: none;
+  }
+
+  svg {
+    height: 3em;
+    transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .line {
+    fill: none;
+    stroke: white;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 3;
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+      stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1),
+      stroke 600ms cubic-bezier(0.4, 0, 0.2, 1);
+    &.open {
+      stroke: rgb(255, 135, 135);
+    }
+  }
+
+  .lineTopBottom {
+    stroke-dasharray: 12 63;
+    stroke: rgb(240, 240, 240);
+    &.open {
+      stroke: rgb(255, 135, 135);
+    }
+  }
+  input:checked + svg {
+    transform: rotate(-45deg);
+  }
+  input:checked + svg .lineTopBottom {
+    stroke-dasharray: 20 300;
+    stroke-dashoffset: -32.42;
+  }
+}
