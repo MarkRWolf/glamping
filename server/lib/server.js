@@ -30,7 +30,7 @@ expressServer.use(bodyParser.json());
 expressServer.use(bodyParser.urlencoded({ extended: true }));
 expressServer.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://markrwolf.github.io",
     credentials: true,
   })
 );
