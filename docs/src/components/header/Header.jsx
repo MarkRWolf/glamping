@@ -28,7 +28,7 @@ function Header({ path = "client" }) {
 
     const timeout = setTimeout(() => {
       setJustNavigated(false);
-      location !== "/" && window.scrollTo({ top: 250, behavior: "smooth" });
+      location !== "/" && window.scrollTo({ top: 200, behavior: "smooth" });
     }, 400);
 
     const handleScroll = () => {
