@@ -34,7 +34,7 @@
       z-index: 21;
       top: 24dvh;
       left: 50%;
-      transform: translateX(-50%);
+      transform: translate(-50%, -100%);
 
       color: #829b97;
       height: 60px;
