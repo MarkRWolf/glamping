@@ -24,9 +24,10 @@
   }
 
   .links {
-    margin-top: -5rem;
-    padding-top: 1rem;
     position: absolute;
+    top: 30dvh;
+    left: 0;
+    margin: 0 auto;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
