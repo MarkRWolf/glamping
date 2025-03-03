@@ -34,6 +34,12 @@ expressServer.use(
     credentials: true,
   })
 );
+expressServer.use(
+  cors({
+    origin: "http://localhost:5173",
+    credentials: true,
+  })
+);
 expressServer.use(cookieParser());
 expressServer.use(express.static("public"));
 expressServer.use(express.static(path.join(__dirname, "client/dist")));
@@ -66,9 +72,6 @@ server.run = () => {
   console.log("\n\n---------------------");
 
   expressServer.listen(port, () => console.log(`Running on port: ${port}`));
-  expressServer.listen(process.env.SERVER_PORT, () =>
-    console.log(`Running : ${process.env.SERVER_PORT}`)
-  );
 };
 
 export default server;
