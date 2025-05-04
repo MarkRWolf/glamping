@@ -9,16 +9,7 @@ export const seedUsers = async () => {
     email: "admin@seeduser.dk",
     picture: "/users/default.png",
     role: "admin",
-    hashedPassword: await bcrypt.hash("admin", 10),
-  });
-
-  // Seeding Guest User
-  const guest = await seedUser({
-    name: "guest",
-    email: "guest@mediacollege.dk",
-    picture: "/users/default.png",
-    role: "guest",
-    hashedPassword: await bcrypt.hash("guest", 10),
+    hashedPassword: await bcrypt.hash("yeehaw", 10),
   });
 
   return true;

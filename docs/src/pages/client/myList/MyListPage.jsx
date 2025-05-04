@@ -4,6 +4,7 @@ import styles from "./myListPage.module.css";
 import Activity from "../../../components/activities/activity/Activity";
 import { useEffect } from "react";
 import Button from "../../../components/ui/Button/Button";
+import { serverURL } from "../../../../settings";
 
 function MyListPage() {
   const [myActivities, setMyActivities] = useLocalStorage("myActivities", []);
@@ -11,7 +12,7 @@ function MyListPage() {
   useEffect(() => {
     // verify that user-liked items still exist in db
     const fetchActivities = async () => {
-      const res = await fetch("https://glamping.onrender.com/api/activities", {
+      const res = await fetch(`${serverURL}/api/activities`, {
         method: "GET",
         credentials: "include",
       });

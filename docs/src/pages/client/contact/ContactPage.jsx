@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import Info from "../../../components/info/Info";
 import styles from "./contactPage.module.css";
 import Wavy from "../../../components/wavy/Wavy";
+import { serverURL } from "../../../../settings";
 
 const initForm = {
   name: "",
@@ -26,7 +27,7 @@ function ContactPage() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const res = await fetch("https://glamping.onrender.com/api/contact", {
+    const res = await fetch(`${serverURL}/api/contact`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

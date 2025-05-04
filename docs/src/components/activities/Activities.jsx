@@ -2,6 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import styles from "./activities.module.css";
 import { Suspense } from "react";
 import Activity from "./activity/Activity";
+import { serverURL } from "../../../settings";
 
 function Activities() {
   return (
@@ -10,7 +11,7 @@ function Activities() {
         {useQuery({
           queryKey: ["activities"],
           queryFn: () =>
-            fetch("https://glamping.onrender.com/api/activities", {
+            fetch(`${serverURL}/api/activities`, {
               method: "GET",
               credentials: "include",
             })

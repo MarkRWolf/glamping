@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
-import styles from "./StayForm.module.css";
+import styles from "./stayForm.module.css";
 import { useQueryClient } from "@tanstack/react-query";
+import { serverURL } from "../../../../../settings";
 
 const initStay = {
   title: "",
@@ -31,7 +32,7 @@ function StayForm() {
     if (file) formData.append("file", file);
 
     try {
-      const res = await fetch("https://glamping.onrender.com/api/stay", {
+      const res = await fetch(`${serverURL}/api/stay`, {
         method: "POST",
         body: formData,
         credentials: "include",
@@ -52,9 +53,7 @@ function StayForm() {
             onClick={() => imageRef.current.click()}
             style={{ cursor: "pointer" }}
             src={
-              stay?.file
-                ? URL.createObjectURL(stay.file)
-                : "https://glamping.onrender.com/activities/default.jpg"
+              stay?.file ? URL.createObjectURL(stay.file) : `${serverURL}/activities/default.jpg`
             }
             alt={"Activity picture"}
           />

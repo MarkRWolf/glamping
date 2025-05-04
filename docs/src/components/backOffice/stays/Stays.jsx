@@ -3,6 +3,7 @@ import styles from "./stays.module.css";
 import { useQuery } from "@tanstack/react-query";
 import StayForm from "./stayForm/StayForm";
 import Stay from "./stay/Stay";
+import { serverURL } from "../../../../settings";
 
 function Stays() {
   return (
@@ -13,7 +14,7 @@ function Stays() {
             {useQuery({
               queryKey: ["stays"],
               queryFn: () =>
-                fetch("https://glamping.onrender.com/api/stays", {
+                fetch(`${serverURL}/api/stays`, {
                   method: "GET",
                   credentials: "include",
                 })

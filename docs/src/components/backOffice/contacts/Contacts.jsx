@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import styles from "./contacts.module.css";
 import { useQuery } from "@tanstack/react-query";
 import Contact from "./contact/Contact";
+import { serverURL } from "../../../../settings";
 
 function Contacts() {
   return (
@@ -12,7 +13,7 @@ function Contacts() {
             {useQuery({
               queryKey: ["contacts"],
               queryFn: () =>
-                fetch("https://glamping.onrender.com/api/contacts", {
+                fetch(`${serverURL}/api/contacts`, {
                   method: "GET",
                   credentials: "include",
                 })

@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 import { useQuery } from "@tanstack/react-query";
 import BackAuth from "./backAuth/BackAuth";
+import { serverURL } from "../../../settings";
 
 function Authen({ children }) {
   return (
@@ -8,7 +9,7 @@ function Authen({ children }) {
       {useQuery({
         queryKey: ["authStatus"],
         queryFn: () =>
-          fetch("https://glamping.onrender.com/api/auth/token", {
+          fetch(`${serverURL}/api/auth/token`, {
             method: "POST",
             credentials: "include",
           })

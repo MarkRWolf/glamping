@@ -3,6 +3,7 @@ import Wavy from "../wavy/Wavy";
 import styles from "./reviews.module.css";
 import { useState } from "react";
 import { GoChevronDown, GoChevronUp } from "react-icons/go";
+import { serverURL } from "../../../settings";
 
 function Reviews() {
   const [shownReviews, setShownReviews] = useState(3);
@@ -10,7 +11,7 @@ function Reviews() {
   const { data } = useQuery({
     queryKey: ["reviews"],
     queryFn: () =>
-      fetch("https://glamping.onrender.com/api/reviews", {
+      fetch(`${serverURL}/api/reviews`, {
         method: "GET",
         credentials: "include",
       })

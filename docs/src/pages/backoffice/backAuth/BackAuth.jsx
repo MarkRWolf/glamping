@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styles from "./backAuth.module.css";
+import { serverURL } from "../../../../settings";
 
 const initUser = {
   email: "",
@@ -15,7 +16,7 @@ function BackAuth() {
     const { email, password } = userInput;
 
     try {
-      const res = await fetch("https://glamping.onrender.com/api/auth/adminSignIn", {
+      const res = await fetch(`${serverURL}/api/auth/adminSignIn`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

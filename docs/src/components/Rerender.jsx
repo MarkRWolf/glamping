@@ -1,11 +1,12 @@
 import { useQuery } from "@tanstack/react-query";
 import { Suspense } from "react";
+import { serverURL } from "../../settings";
 
 function Rerender() {
   const { data } = useQuery({
     queryKey: ["hello"],
     queryFn: () =>
-      fetch("https://glamping.onrender.com/api/hello", {
+      fetch(`${serverURL}/api/hello`, {
         method: "GET",
         credentials: "include",
       })

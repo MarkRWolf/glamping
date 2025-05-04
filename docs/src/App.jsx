@@ -2,6 +2,7 @@ import useSettingStore from "../store/settingStore.js";
 import { usePaths } from "./paths/usePaths";
 import "./App.css";
 import { useQuery } from "@tanstack/react-query";
+import { serverURL } from "../settings.js";
 
 function App() {
   const { isMobile } = useSettingStore();
@@ -10,7 +11,7 @@ function App() {
   const { data } = useQuery({
     queryKey: ["hello"],
     queryFn: () =>
-      fetch("https://glamping.onrender.com/api/hello", {
+      fetch(`${serverURL}/api/hello`, {
         method: "GET",
         credentials: "include",
       })

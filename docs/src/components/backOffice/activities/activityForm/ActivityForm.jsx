@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import styles from "./activityForm.module.css";
 import { useQueryClient } from "@tanstack/react-query";
+import { serverURL } from "../../../../../settings";
 const initForm = {
   title: "",
   description: "",
@@ -49,7 +50,7 @@ function ActivityForm() {
             src={
               activity?.file
                 ? URL.createObjectURL(activity.file)
-                : "https://glamping.onrender.com/activities/default.jpg"
+                : `${serverURL}/activities/default.jpg`
             }
             alt={"Activity picture"}
           />
