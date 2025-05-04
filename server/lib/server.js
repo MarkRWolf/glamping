@@ -34,12 +34,12 @@ expressServer.use(
     credentials: true,
   })
 );
-expressServer.use(
+/* expressServer.use(
   cors({
     origin: "http://localhost:5173",
     credentials: true,
   })
-);
+); */
 expressServer.use(cookieParser());
 expressServer.use(express.static("public"));
 expressServer.use(express.static(path.join(__dirname, "client/dist")));
