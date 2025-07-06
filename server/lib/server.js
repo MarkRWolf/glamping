@@ -34,6 +34,12 @@ expressServer.use(
     credentials: true,
   })
 );
+expressServer.use(
+  cors({
+    origin: "https://glamping.mark-wolf.com",
+    credentials: true,
+  })
+);
 /* expressServer.use(
   cors({
     origin: "http://localhost:5173",
