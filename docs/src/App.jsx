@@ -5,8 +5,6 @@ import { useQuery } from "@tanstack/react-query";
 import { serverURL } from "../settings.js";
 
 function App() {
-  const { isMobile } = useSettingStore();
-
   // Random call because if a route doesn't fetch data, react doesn't behave the same.
 
   const { data } = useQuery({
