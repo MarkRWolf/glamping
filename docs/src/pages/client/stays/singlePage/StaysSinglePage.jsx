@@ -10,7 +10,7 @@ function StaysSinglePage() {
   const { data: stay } = useQuery({
     queryKey: ["stay", id],
     queryFn: () =>
-      fetch(`https://glamping.onrender.com/api/ophold/${id}`, {
+      fetch(`https://glamping-api.mark-wolf.com/api/ophold/${id}`, {
         method: "GET",
         credentials: "include",
       })

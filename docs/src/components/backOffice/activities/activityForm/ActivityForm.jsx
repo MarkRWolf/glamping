@@ -25,7 +25,7 @@ function ActivityForm() {
     if (file) formData.append("file", file);
 
     try {
-      const res = await fetch("https://glamping.onrender.com/api/activity", {
+      const res = await fetch("https://glamping-api.mark-wolf.com/api/activity", {
         method: "POST",
         body: formData,
         credentials: "include",
